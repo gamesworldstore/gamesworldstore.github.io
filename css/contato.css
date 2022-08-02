@@ -1,24 +1,38 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-size: 102%;
+    max-width: 720px;
+    
+}
+
 body{
-    font-family: Verdana,Tahoma,sans-serif;
     text-align: center;
+    place-items: center;
+    
+}
+h1{
+    font-size: 25px;
+    padding-top: 10px;
 }
 
 form {
-    font-family: Verdana,Tahoma,sans-serif;
     font-size: 15px;
     background-color: #ffffff;
     max-width: 500px;
-    box-shadow: 2px 2px 2px #050505;
+    text-align: center;
+    box-shadow: 1px 1px 10px #050505;  
 }
 
 input, textarea {
-    width: 200px;
     padding: 10px;
-    color: black;
-    margin-left: 20px;
+    outline: none;
+
     margin-top: 10px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
+    border-radius: 5px;
     border: 1px solid;
 }
 
@@ -53,4 +67,7 @@ form label {
     margin-left: 20px;
     color: black;
     font-weight: bold;
+}
+h4{
+    padding: 10px;
 }
