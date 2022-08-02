@@ -41,17 +41,16 @@ body{
 .menu a:hover{
     color:rgb(45, 94, 255);    
 }
-#search{
-    flex-direction:row;
-}
+
 input{
+    width: 10vmax;
     border: none;
     padding-left: 10px;
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
     outline: none;
 }
-button{
+#search button{
     padding: 0 10px;
     margin: -10px;
     border: none;
@@ -60,7 +59,7 @@ button{
     background-color: rgb(255, 255, 255);
     transition: .3s;
 }
-button:hover{
+#search button:hover{
     background-color: rgb(227, 227, 227);
     border-color: rgb(45, 94, 255);  
 }
