@@ -42,13 +42,9 @@ body{
     color:rgb(45, 94, 255);    
 }
 
-input{
-    width: 10vmax;
-    border: none;
-    padding-left: 10px;
-    border-bottom-left-radius: 10px;
-    border-top-left-radius: 10px;
-    outline: none;
+
+#search{
+    flex-direction:row;
 }
 #search button{
     padding: 0 10px;
@@ -58,6 +54,15 @@ input{
     border-top-right-radius: 10px;
     background-color: rgb(255, 255, 255);
     transition: .3s;
+}
+#search input{
+    max-width: 10vmax;
+    min-width: none;
+    border: none;
+    padding-left: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    outline: none;
 }
 #search button:hover{
     background-color: rgb(227, 227, 227);
