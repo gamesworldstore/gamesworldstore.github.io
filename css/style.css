@@ -45,20 +45,30 @@ body{
 }
 
 #search{
-    flex-direction:column;
+    flex-direction:row;
+    display: flex;
+    flex-wrap:wrap;
+    direction: ltr;
 }
 #search button{
     padding: 0 10px;
-    margin: -10px;
     border: none;
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
     background-color: rgb(255, 255, 255);
     transition: .3s;
+    cursor: pointer;
 }
 #search input{
+    flex-direction:row;
+    display: flex;
+    flex-wrap:wrap;
+    direction: ltr;
+
+    max-width: 10vmax;
+    min-width: 15vmin;
     border: none;
-    padding-left: 10px;
+    padding-left: 20px;
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
     outline: none;
