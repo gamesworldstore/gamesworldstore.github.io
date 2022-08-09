@@ -7,7 +7,7 @@
     font-size: 102%;
 }
 body{
-    background-color: rgb(24, 25, 44); 
+    background-color: rgb(16, 17, 31); 
 }
 .menu{
     background-image: linear-gradient(to right, rgb(13, 0, 44),black );
@@ -45,6 +45,7 @@ body{
 
 }
 #search button{
+    outline: none;
     padding: 0 10px;
     border: none;
     border-bottom-right-radius: 10px;
@@ -73,8 +74,8 @@ body{
 
 #title{
     direction:rtl;
-    margin-top: 0;
-    background-image: linear-gradient(rgb(0, 0, 0), rgb(24, 25, 44));
+    padding: 10px;
+    background-image: linear-gradient(rgb(0, 0, 0), rgb(16, 17, 31));
 
 }
 #title h1{
@@ -86,15 +87,20 @@ body{
     margin-bottom: 60px;
 }
 #title button{
+    outline: none;
     background-color: rgb(234, 26, 26);
     cursor: pointer;
     padding: 10px;
     border-radius: 150px;
-    
+    border-style: solid;
+    border-color: transparent;
+    border-width: 1px;
     transition: .3s;
 }
 #title button:hover{
-    padding: 11px;
+    box-shadow: 0px 0px 10px red;
+    border-color: rgb(100, 20, 20);
+
 }
 #title img{
     filter: invert(100%);
@@ -142,6 +148,7 @@ body{
     padding: 10px;
 }
 #cart{
+    outline: none;
     margin-top: 10px;
     cursor:pointer;
     background-color: white;
