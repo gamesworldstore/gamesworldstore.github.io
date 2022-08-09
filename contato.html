@@ -6,36 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
     <link rel="icon" href="img/control.png">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/contato.css">
+    
     <title>Contato</title>
 </head>
 <body>
-    <h1>SOBRE NÓS</h1>
-    <p>Somos uma loja de games de mídia digital recém lançada no mercado. Contamos com os jogos mais atuais e garantimos um processo confortável para que você tenha a melhor experiência.
-    </p>Também possumímos mídias físicas localizadas no nosso ponto físico na Rua João Moreira-199, Centro, em Cajazeiras-PB, Brazil.
-    </p>
-    <form name="meu_form">
-  
-    <h1>FALE CONOSCO</h1>
-
-    <label for="nome">Nome</label>
-    <input type="text" id="nomeid" placeholder="Seu Nome" required="required" name="nome" />
-    <br>
+    <nav class = "menu">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="contato.html">CONTACT</a></li>
+            <li><a href="sobre.html">ABOUT</a></li>   
+        </ul>
+        <div id = "search">
+            <input type="text" maxlength="20px">
+            <button >
+                <img src="img/lupa.svg" alt="lupa" height="12px">
+            </button>
+        </div>
+    </nav>
+    <div class="container">
+        <h1 id = 'title'>SOBRE NÓS</h1>
+        <p>Somos uma loja de games de mídia digital recém lançada no mercado. Contamos com os jogos mais atuais e garantimos um processo confortável para que você tenha a melhor experiência.
+        </p>Também possumímos mídias físicas localizadas no nosso ponto físico na Rua João Moreira-199, Centro, em Cajazeiras-PB, Brazil.
+        </p>
+        <form name="meu_form">
+        
+            <h1 id ="h1">FALE CONOSCO</h1>
     
-    <label for="fone">Fone</label>
-    <input type="tel" id="foneid" placeholder="(xx)xx-xx-xx-xx" name="fone" />
-    <br>
+            <label for="nome">Nome</label>
+            <input type="text" id="nomeid" placeholder="Seu Nome" required="required" name="nome" />
+            <br>
+            
+            <label for="fone">Fone</label>
+            <input type="tel" id="id" placeholder="(xx)xx-xx-xx-xx" name="fone" />
+            <br>
+            
+            <label for="email">Email</label>
+            <input type="email" id="id" placeholder="SeuEmail@mail.com" name="email" />
+            <br>
+            
+        
+            <textarea placeholder="Deixe sua opnião" rows="3"></textarea>
+            <br>
+        
+            <input type="submit" class="enviar" onclick="Enviar();" value="Enviar" />
+            <h4>🎧 ouvidoria  <br> 📞 0800 054 9831</h4>
+        </form>
+        <script src="js/contato.js"></script>
+    </div>
     
-    <label for="email">Email</label>
-    <input type="email" id="emailid" placeholder="SeuEmail@mail.com" name="email" />
-    <br>
-    
-  
-    <textarea placeholder="Deixe sua opnião"></textarea>
-    <br>
-  
-    <input type="submit" class="enviar" onclick="Enviar();" value="Enviar" />
-    <h4>🎧 ouvidoria  <br> 📞 0800 054 9831</h4>
-    <script src="js/contato.js"></script>
 </body>
 </html>
