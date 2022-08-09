@@ -7,8 +7,6 @@
     font-size: 102%;
 }
 body{
-    width:100%;
-    min-height: 100vh;
     background-color: rgb(20, 21, 32); 
 }
 .menu{
@@ -23,10 +21,7 @@ body{
 }
 .menu ul{
     display: flex;
-    text-align: center;
-    width: 30vh;
-    
-    
+    text-align: center; 
 }
 .menu ul li{
     display: flex;
@@ -47,8 +42,7 @@ body{
 #search{
     flex-direction:row;
     display: flex;
-    flex-wrap:wrap;
-    direction: ltr;
+
 }
 #search button{
     padding: 0 10px;
@@ -60,11 +54,6 @@ body{
     cursor: pointer;
 }
 #search input{
-    flex-direction:row;
-    display: flex;
-    flex-wrap:wrap;
-    direction: ltr;
-
     max-width: 10vmax;
     min-width: 15vmin;
     border: none;
@@ -118,7 +107,7 @@ h1{
     min-width: 100vmin;
     max-width: 50vmax;
     min-height: 10vmin;
-    max-height: 250vmax;
+
     flex-wrap:wrap;
     place-content: center;
     flex-direction:row;
@@ -134,6 +123,7 @@ h1{
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     border: none;
+    border-radius: 10px;
 }
 .games h4{
     margin-top: -20px;
