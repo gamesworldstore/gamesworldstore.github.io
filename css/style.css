@@ -18,7 +18,6 @@ body{
     place-content: center;
     flex-direction:row;
     direction: ltr;
-    
 }
 .menu ul{
     display: flex;
@@ -120,7 +119,6 @@ body{
     min-width: 100vmin;
     max-width: 50vmax;
     min-height: 10vmin;
-
     flex-wrap:wrap;
     place-content: center;
     flex-direction:row;
