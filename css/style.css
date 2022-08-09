@@ -9,14 +9,16 @@
 body{
     width:100%;
     min-height: 100vh;
-    place-items: center;
-    background-color: rgb(20, 21, 32);
-    
+    background-color: rgb(20, 21, 32); 
 }
 .menu{
     background-color: black;
     display: flex;
     place-items: center;
+    flex-wrap:wrap;
+    place-content: center;
+    flex-direction:row;
+    direction: ltr;
     
 }
 .menu ul{
@@ -42,9 +44,8 @@ body{
     color:rgb(45, 94, 255);    
 }
 
-
 #search{
-    flex-direction:row;
+    flex-direction:column;
 }
 #search button{
     padding: 0 10px;
@@ -57,7 +58,7 @@ body{
 }
 #search input{
     max-width: 10vmax;
-    min-width: none;
+    min-width: 20vmin;
     border: none;
     padding-left: 10px;
     border-bottom-left-radius: 10px;
@@ -67,4 +68,108 @@ body{
 #search button:hover{
     background-color: rgb(227, 227, 227);
     border-color: rgb(45, 94, 255);  
+}
+
+h1{
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+#carrinho{
+    direction:rtl;
+    margin-right: 10px;
+
+}
+#carrinho button{
+    background-color: rgb(234, 26, 26);
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 150px;
+    
+    transition: .3s;
+}
+#carrinho button:hover{
+    padding: 11px;
+}
+#carrinho img{
+    filter: invert(100%);
+
+}
+.games{
+    display: flex;
+    place-content: center center;
+    direction: ltr;
+    flex-wrap: wrap;
+}
+.games ul{
+    display: flex;
+    text-align: center;
+    color:rgb(212, 212, 212);
+    padding: 3px;
+    min-width: 100vmin;
+    max-width: 50vmax;
+    min-height: 10vmin;
+    max-height: 250vmax;
+    flex-wrap:wrap;
+    place-content: center;
+    flex-direction:row;
+    direction: ltr;
+}
+.games li{
+    margin-bottom: 10px;
+}
+.games img{
+    margin: 5px;
+    padding: 15px;
+    background-color: rgb(36, 11, 98);
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border: none;
+}
+.games h4{
+    margin-top: -20px;
+    border: none;
+    background-color: rgb(36, 11, 98);
+    margin-left: 5px;
+    margin-right: 5px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 10px;
+}
+#cart{
+    margin-top: 10px;
+    cursor:pointer;
+    background-color: white;
+    font-weight: bolder;
+    place-items: center;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 15px;
+    transition: .3s;
+    
+}
+#cartimg{
+    cursor:pointer;
+    place-items: center;
+    display: none;
+    padding: 0;
+    margin: 0 auto;
+    border-radius: 10px;
+    transition: .9s;
+    
+}
+#cart:hover{
+    background-color: rgb(242, 21, 21);
+    text-align: center;
+    color: aliceblue;
+    display: inline;
+}
+#cart:hover img{
+    background-color: rgba(238, 52, 52, 0);
+    border: none;
+    display: inline;
+    filter: invert(100);
 }
