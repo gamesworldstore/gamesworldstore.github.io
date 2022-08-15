@@ -79,6 +79,13 @@ input:focus, textarea:focus {
     max-width: none;
     border: 1px solid;
     color: black;
+    transition: .3s;
+}
+.enviar:hover{
+    background-color: #2f2077;
+    color: rgb(200, 200, 200);
+    border-color: transparent;
+    box-shadow: 0 0 9px rgb(31, 12, 107);
 }
 
 form label {

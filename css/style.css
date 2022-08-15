@@ -100,6 +100,7 @@ body{
 #title button:hover{
     box-shadow: 0px 0px 10px red;
     border-color: rgb(100, 20, 20);
+    background-color: rgb(248, 47, 47);
 
 }
 #title img{
@@ -126,27 +127,20 @@ body{
 }
 .games li{
     margin-bottom: 10px;
+    background-color: rgb(36, 11, 98);
+    border-radius: 10px;
+    border: none;
 }
 .games img{
-    margin: 5px;
-    padding: 15px;
-    background-color: rgb(36, 11, 98);
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-    border: none;
+    margin: 10px;
     border-radius: 10px;
 }
 .games h4{
     margin-top: -20px;
-    border: none;
-    background-color: rgb(36, 11, 98);
-    margin-left: 5px;
-    margin-right: 5px;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    padding: 10px;
+    padding-top: 10px;
 }
 #cart{
+    margin-bottom: 10px;
     outline: none;
     margin-top: 10px;
     cursor:pointer;
@@ -171,6 +165,7 @@ body{
     
 }
 #cart:hover{
+    box-shadow: 0 0 10px rgb(0, 0, 0);
     background-color: rgb(242, 21, 21);
     text-align: center;
     color: aliceblue;

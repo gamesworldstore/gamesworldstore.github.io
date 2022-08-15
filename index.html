@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="img/control.png">
     <title>Game's World</title>
 </head>
@@ -17,19 +17,21 @@
             <li><a href="sobre.html">ABOUT</a></li>   
         </ul>
         <div id = "search">
-            <input type="text" maxlength="20px">
-            <button >
+            <input id="searchbar" type="text" maxlength="20px">
+            <button onclick="jogos.search()">
                 <img src="img/lupa.svg" alt="lupa" height="12px">
             </button>
         </div>
     </nav>
     <div id ="title">
         <br>
-        <button>
-            <img src="img/cart.svg" 
+        <button id="caring">
+            <img src="img/cart.svg"
+            title="Carrinho"
             height="20px"
             width="30px"
             alt="">
+            
         </button>
         <h1>Jogos Disponíveis</h1>
         <br>
@@ -42,134 +44,118 @@
                 <img src="img/forza4.jpg"
                 width="200px"
                 alt="Forza Horizon 4">  
-                <h4>Forza Horizon 4
-                    <br>
-                    <button id = "cart" title="Comprar">
-                        R$: 209,00
-                        <img src="img/cart.svg" 
-                        id = "cartimg"
-                        width="25px"
-                        height="20px"
-                        alt="cartimg">
-                    </button>
-                </h4>
+                <h4 id = "jogo">Forza Horizon 4</h4>
+                <button id = "cart" title="Comprar">
+                    R$: 209,00
+                    <img src="img/cart.svg" 
+                    id = "cartimg"
+                    width="25px"
+                    height="20px"
+                    alt="cartimg">
+                </button>
             </li>
             <li>
                 <img src="img/gdwar.jpg" 
                 width="200px"
                 alt="God Of War">
-                <h4>God of War
-                    <br>
-                    <button id = "cart" title="Comprar">
-                        R$: 167,00
-                        <img src="img/cart.svg" 
-                        id = "cartimg"
-                        width="25px"
-                        height="20px"
-                        alt="cartimg">
-                    </button>
-                </h4>
+                <h4 id = "jogo">God of War</h4>
+                <button id = "cart" title="Comprar">
+                    R$: 167,00
+                    <img src="img/cart.svg" 
+                    id = "cartimg"
+                    width="25px"
+                    height="20px"
+                    alt="cartimg">
+                </button>
             </li>
             <li>
                 <img src="img/gta5.jpg" 
                 width="200px"
                 alt="Grand Theft Auto 5">
-                <h4>Grand Theft Auto 5
-                    <br>
-                    <button id = "cart" title="Comprar">
-                        R$: 59,00
-                        <img src="img/cart.svg" 
-                        id = "cartimg"
-                        width="25px"
-                        height="20px"
-                        alt="cartimg">
-                    </button>
-                </h4>
+                <h4 id = "jogo">Grand Theft Auto 5</h4>
+                <button id = "cart" title="Comprar">
+                    R$: 59,00
+                    <img src="img/cart.svg" 
+                    id = "cartimg"
+                    width="25px"
+                    height="20px"
+                    alt="cartimg">
+                </button>
             </li>
             <li>
                 <img src="img/nstorm4.jpg" 
                 width="200px"
                 alt="Naruto Shippuden Storm 4">
-                <h4>Naruto S Storm 4
-                    <br>
-                    <button id = "cart" title="Comprar">
-                        R$: 120,00
-                        <img src="img/cart.svg" 
-                        id = "cartimg"
-                        width="25px"
-                        height="20px"
-                        alt="cartimg">
-                    </button>
-                </h4>
+                <h4 id = "jogo">Naruto S Storm 4</h4>
+                <button id = "cart" title="Comprar">
+                    R$: 120,00
+                    <img src="img/cart.svg" 
+                    id = "cartimg"
+                    width="25px"
+                    height="20px"
+                    alt="cartimg">
+                </button>
             </li>
             <li>
                 <img src="img/onep4.jpg" 
                 width="200px"
                 alt="One Piece Pirate Warriors 4">
-                <h4>One Piece PW 4 
-                    <br>
-                    <button id = "cart" title="Comprar">
-                        R$: 112,00
-                        <img src="img/cart.svg" 
-                        id = "cartimg"
-                        width="25px"
-                        height="20px"
-                        alt="cartimg">
-                    </button>
-                </h4>
+                <h4 id = "jogo">One Piece PW 4</h4>
+                <button id = "cart" title="Comprar">
+                    R$: 112,00
+                    <img src="img/cart.svg" 
+                    id = "cartimg"
+                    width="25px"
+                    height="20px"
+                    alt="cartimg">
+                </button>
             </li>
             <li>
                 <img src="img/resident7.jpg" 
                 width="200px"
                 alt="Resident Evil 7">
-                <h4>Resident Evil 7
-                    <br>
-                    <button id = "cart" title="Comprar">
-                        R$: 77,00
-                        <img src="img/cart.svg" 
-                        id = "cartimg"
-                        width="25px"
-                        height="20px"
-                        alt="cartimg">
-                    </button>
-                </h4>
+                <h4 id = "jogo">Resident Evil 7</h4>
+                <button id = "cart" title="Comprar">
+                    R$: 77,00
+                    <img src="img/cart.svg" 
+                    id = "cartimg"
+                    width="25px"
+                    height="20px"
+                    alt="cartimg">
+                </button>
             </li>
             <li>
                 <img src="img/resident8.jpg" 
                 width="200px"
                 alt="Resident Evil 8">
-                <h4>Resident Evil 8
-                    <br>
-                    <button id = "cart" title="Comprar">
-                        R$: 169,00
-                        <img src="img/cart.svg" 
-                        id = "cartimg"
-                        width="25px"
-                        height="20px"
-                        alt="cartimg">
-                    </button>
-                </h4>
+                <h4 id = "jogo">Resident Evil 8</h4>
+                <button id = "cart" title="Comprar">
+                    R$: 169,00
+                    <img src="img/cart.svg" 
+                    id = "cartimg"
+                    width="25px"
+                    height="20px"
+                    alt="cartimg">
+                </button>
             </li>
             <li>
                 <img src="img/witcher3.jpg" 
                 width="200px"
-                height="109px"
                 alt="The Witcher 3 Wild Hunter">
-                <h4>The Witcher 3
-                    <br>
-                    <button id = "cart" title="Comprar">
-                        R$: 120,00
-                        <img src="img/cart.svg" 
-                        id = "cartimg"
-                        width="25px"
-                        alt="cartimg">
-                    </button>
-                </h4>
+                <h4 id = "jogo">The Witcher 3</h4>
+                <button id = "cart" title="Comprar">
+                    R$: 120,00
+                    <img src="img/cart.svg" 
+                    id = "cartimg"
+                    width="25px"
+                    height="20px"
+                    alt="cartimg">
+                </button>
             </li>
         </ul>
     </div>
 
 
-
+    <script src="js/script.js"></script>
 </body>
 </html>
