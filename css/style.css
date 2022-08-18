@@ -13,9 +13,9 @@ body{
 .menu{
     background-image: linear-gradient(to right, rgb(13, 0, 44),black );
     display: flex;
-    place-items: center;
+    place-items: left;
     flex-wrap:wrap;
-    place-content: center;
+    place-content: left;
     flex-direction:row;
     direction: ltr;
 }
