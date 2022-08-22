@@ -42,7 +42,8 @@ const criar = () => {
 
     const input = document.querySelector("#searchbar").value;
     const busca = jogos.filter(jogo => jogo.titulo.includes(input));
-
+    const h1 = document.querySelector("#h1title");
+    h1.textContent = 'Pesquisa';
     div.textContent = '';
     for(let jogo of busca) {
         mostrar(jogo.titulo, jogo.imagem);
