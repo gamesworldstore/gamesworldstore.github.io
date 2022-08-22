@@ -11,17 +11,24 @@
 </head>
 <body>
     <nav class = "menu">
-        <li><a href="index.html"><img src="img/logo.png" alt="some text" width=100 height=70></a></li>
+        <li><a href="index.html">
+            <img src="img/logo.png" 
+            alt="some text" 
+            width=100px
+            height=50px
+            id="logo"
+            title="Página Inicial"></a>
+        </li>
         <ul>
             
-            <li><a href="index.html">JOGOS</a></li>
-            <li><a href="contato.html">CONTATO</a></li>
-            <li><a href="sobre.html">SOBRE</a></li>   
+            <li><a href="index.html" title="Página Inicial">JOGOS</a></li>
+            <li><a href="contato.html" title="Página de Contato">CONTATO</a></li>
+            <li><a href="sobre.html" title="Página dos Criadores">SOBRE</a></li>   
         </ul>
         <div id = "search">
             <input id="searchbar" type="text" maxlength="20px">
-            <button onclick="jogos.search()">
-                <img src="img/lupa.svg" alt="lupa" height="10px">
+            <button class="searchbutton">
+                <img src="img/lupa.svg" alt="lupa" height="10px" title="Busca">
             </button>
         </div>
     </nav>
@@ -45,8 +52,9 @@
             <li>
                 <img src="img/forza4.jpg"
                 width="200px"
-                alt="Forza Horizon 4">  
-                <h4 id = "jogo">Forza Horizon 4</h4>
+                alt="Forza Horizon 4"
+                id="gamesIMG">  
+                <h4 class= "jogo">Forza Horizon 4</h4>
                 <button id = "cart" title="Comprar">
                     R$: 209,00
                     <img src="img/cart.svg" 
@@ -59,8 +67,9 @@
             <li>
                 <img src="img/gdwar.jpg" 
                 width="200px"
-                alt="God Of War">
-                <h4 id = "jogo">God of War</h4>
+                alt="God Of War"
+                id="gamesIMG">
+                <h4 class = "jogo">God of War</h4>
                 <button id = "cart" title="Comprar">
                     R$: 167,00
                     <img src="img/cart.svg" 
@@ -73,8 +82,9 @@
             <li>
                 <img src="img/gta5.jpg" 
                 width="200px"
-                alt="Grand Theft Auto 5">
-                <h4 id = "jogo">Grand Theft Auto 5</h4>
+                alt="Grand Theft Auto 5"
+                id="gamesIMG">
+                <h4 class = "jogo">Grand Theft Auto 5</h4>
                 <button id = "cart" title="Comprar">
                     R$: 59,00
                     <img src="img/cart.svg" 
@@ -87,8 +97,9 @@
             <li>
                 <img src="img/nstorm4.jpg" 
                 width="200px"
-                alt="Naruto Shippuden Storm 4">
-                <h4 id = "jogo">Naruto S Storm 4</h4>
+                alt="Naruto Shippuden Storm 4"
+                id="gamesIMG">
+                <h4 class = "jogo">Naruto S Storm 4</h4>
                 <button id = "cart" title="Comprar">
                     R$: 120,00
                     <img src="img/cart.svg" 
@@ -101,8 +112,9 @@
             <li>
                 <img src="img/onep4.jpg" 
                 width="200px"
-                alt="One Piece Pirate Warriors 4">
-                <h4 id = "jogo">One Piece PW 4</h4>
+                alt="One Piece Pirate Warriors 4"
+                id="gamesIMG">
+                <h4 class = "jogo">One Piece PW 4</h4>
                 <button id = "cart" title="Comprar">
                     R$: 112,00
                     <img src="img/cart.svg" 
@@ -115,8 +127,9 @@
             <li>
                 <img src="img/resident7.jpg" 
                 width="200px"
-                alt="Resident Evil 7">
-                <h4 id = "jogo">Resident Evil 7</h4>
+                alt="Resident Evil 7"
+                id="gamesIMG">
+                <h4 class= "jogo">Resident Evil 7</h4>
                 <button id = "cart" title="Comprar">
                     R$: 77,00
                     <img src="img/cart.svg" 
@@ -129,8 +142,9 @@
             <li>
                 <img src="img/resident8.jpg" 
                 width="200px"
-                alt="Resident Evil 8">
-                <h4 id = "jogo">Resident Evil 8</h4>
+                alt="Resident Evil 8"
+                id="gamesIMG">
+                <h4 class = "jogo">Resident Evil 8</h4>
                 <button id = "cart" title="Comprar">
                     R$: 169,00
                     <img src="img/cart.svg" 
@@ -143,8 +157,9 @@
             <li>
                 <img src="img/witcher3.jpg" 
                 width="200px"
-                alt="The Witcher 3 Wild Hunter">
-                <h4 id = "jogo">The Witcher 3</h4>
+                alt="The Witcher 3 Wild Hunter"
+                id="gamesIMG">
+                <h4 class = "jogo">The Witcher 3</h4>
                 <button id = "cart" title="Comprar">
                     R$: 120,00
                     <img src="img/cart.svg" 
@@ -157,8 +172,9 @@
             <li>
                 <img src="img/resident4.jpg" 
                 width="200px"
-                alt="Resident Evil 4">
-                <h4 id = "jogo">Resident Evil 4 HD Edition</h4>
+                alt="Resident Evil 4"
+                id="gamesIMG">
+                <h4 class = "jogo">Resident Evil 4</h4>
                 <button id = "cart" title="Comprar">
                     R$: 39,99
                     <img src="img/cart.svg" 
@@ -171,8 +187,9 @@
             <li>
                 <img src="img/stardew.jpg" 
                 width="200px"
-                alt="Stardew Valley">
-                <h4 id = "jogo">Stardew Valley</h4>
+                alt="Stardew Valley"
+                id="gamesIMG">
+                <h4 class = "jogo">Stardew Valley</h4>
                 <button id = "cart" title="Comprar">
                     R$: 24,99
                     <img src="img/cart.svg" 
@@ -185,8 +202,9 @@
             <li>
                 <img src="img/terraria.png" 
                 width="200px"
-                alt="terraria">
-                <h4 id = "jogo">Terraria</h4>
+                alt="terraria"
+                id="gamesIMG">
+                <h4 class = "jogo">Terraria</h4>
                 <button id = "cart" title="Comprar">
                     R$: 24,99
                     <img src="img/cart.svg" 
@@ -199,8 +217,9 @@
             <li>
                 <img src="img/red dead.jpg" 
                 width="200px"
-                alt="Red Dead Redemption II">
-                <h4 id = "jogo">Red Dead Redemption II</h4>
+                alt="Red Dead Redemption II"
+                id="gamesIMG">
+                <h4 class = "jogo">Red Dead Red II</h4>
                 <button id = "cart" title="Comprar">
                     R$: 239,00
                     <img src="img/cart.svg" 
@@ -212,8 +231,9 @@
             </li>
         </ul>
     </div>
-
-
+    <footer class="end-page">
+        <p>2022 <b>©</b></p>
+    </footer>
     <script src="js/script.js"></script>
 </body>
 </html>

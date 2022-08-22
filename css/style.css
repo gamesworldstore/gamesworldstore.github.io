@@ -11,6 +11,7 @@ body{
     background-color: rgb(16, 17, 31); 
 }
 .menu{
+    padding-top: 5px;
     background-image: linear-gradient(to right, rgb(13, 0, 44),black );
     display: flex;
     place-items: left;
@@ -38,15 +39,17 @@ body{
 .menu a:hover{
     color:rgb(45, 94, 255);    
 }
-
+#logo{
+    filter:invert(60%);
+}
 #search{
-    flex-direction:row;
-    display: flex;
-
+    flex-direction:column;
+    padding-top: 10px;
 }
 #search button{
     outline: none;
     padding: 0 10px;
+    margin-left: -5px;
     border: none;
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
@@ -76,15 +79,14 @@ body{
     direction:rtl;
     padding: 10px;
     background-image: linear-gradient(rgb(0, 0, 0), rgb(16, 17, 31));
-
 }
 #title h1{
     color: white;
     text-shadow: 2px 2px 2px rgb(58, 0, 248);
     font-size: 3rem;
     text-align: center;
-    margin-top: 30px;
-    margin-bottom: 60px;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 #title button{
     outline: none;
@@ -101,7 +103,10 @@ body{
     box-shadow: 0px 0px 10px red;
     border-color: rgb(100, 20, 20);
     background-color: rgb(248, 47, 47);
-
+}
+#title button:active{
+    transition: -0s;
+    background-color: rgb(100, 20, 20);
 }
 #title img{
     filter: invert(100%);
@@ -111,6 +116,7 @@ body{
     place-content: center center;
     direction: ltr;
     flex-wrap: wrap;
+    margin-bottom: 20px;
 }
 .games ul{
     display: flex;
@@ -176,4 +182,14 @@ body{
     border: none;
     display: inline;
     filter: invert(100);
+}
+.end-page{
+    border-top: 1px solid rgb(75, 75, 75);
+    padding: 20px;
+    min-width: 100vmin;
+    max-width: 50vmax;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    align-items: center;
 }
