@@ -14,9 +14,6 @@ const montarObjeto = () => {
         let imagem = imagens[i].src;
         object.titulo = titulo;
         object.imagem = imagem;
-        /*const img = document.createElement('img');
-        div.appendChild(img);
-        img = imagem;*/
         jogos.push(object);
     }
 };
