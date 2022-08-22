@@ -37,16 +37,25 @@ const mostrar = (titulo, imagem) => {
     ptitle.textContent = titulo;
 };
 
-const button = document.querySelector(".searchbutton").addEventListener("click", () => {
-
+const criar = () => {
     montarObjeto();
 
     const input = document.querySelector("#searchbar").value;
     const busca = jogos.filter(jogo => jogo.titulo.includes(input));
-    console.log(busca);
 
     div.textContent = '';
     for(let jogo of busca) {
         mostrar(jogo.titulo, jogo.imagem);
+    } 
+};
+
+document.querySelector(".searchbutton").addEventListener('click', () => {
+    criar();
+});
+
+document.querySelector("#searchbar").addEventListener('keypress', (e) =>{
+
+    if(e.key == 'Enter'){
+        criar();
     }
 });
