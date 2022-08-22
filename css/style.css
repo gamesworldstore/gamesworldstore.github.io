@@ -119,6 +119,7 @@ body{
     direction: ltr;
     flex-wrap: wrap;
     margin-bottom: 20px;
+    place-items: center;
 }
 .games ul{
     display: flex;
@@ -138,16 +139,20 @@ body{
     background-color: rgb(36, 11, 98);
     border-radius: 10px;
     border: none;
+    display: flex;
+    flex-direction: column;
 }
 .games img{
     margin: 10px;
     border-radius: 10px;
 }
 .games h4{
+    color:rgb(212, 212, 212);
+    text-align: center;
     margin-top: -20px;
     padding-top: 10px;
 }
-#cart{
+.games button{
     margin-bottom: 10px;
     outline: none;
     margin-top: 10px;
@@ -162,7 +167,7 @@ body{
     transition: .3s;
     
 }
-#cartimg{
+.games button img{
     cursor:pointer;
     place-items: center;
     display: none;
@@ -172,14 +177,14 @@ body{
     transition: .9s;
     
 }
-#cart:hover{
+.games button:hover{
     box-shadow: 0 0 10px rgb(0, 0, 0);
     background-color: rgb(242, 21, 21);
     text-align: center;
     color: aliceblue;
     display: inline;
 }
-#cart:hover img{
+.games button:hover img{
     background-color: rgba(238, 52, 52, 0);
     border: none;
     display: inline;
