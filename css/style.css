@@ -91,6 +91,7 @@ body{
     margin-bottom: 20px;
 }
 .title button{
+    position: fixed;
     outline: none;
     background-color: rgb(234, 26, 26);
     cursor: pointer;
@@ -119,11 +120,11 @@ body{
 .title table{
     direction: ltr;
     color: rgb(251, 255, 122);
-    background-color: rgb(36, 11, 98);
+    margin-top: 50px;
+    margin-right: 50px;
     border-radius: 10px;
     text-align: center;
     position:fixed;
-    box-shadow: 0 0 15px rgb(125, 125, 125);
     padding: 5px;
     
     
@@ -182,6 +183,8 @@ body{
     padding-top: 10px;
 }
 .games button{
+    display: flex;
+    flex-direction: row;
     margin-bottom: 10px;
     outline: none;
     margin-top: 10px;
@@ -195,6 +198,9 @@ body{
     padding: 5px 15px;
     transition: .3s;
     
+}
+.games p{
+    margin-left: 3px;
 }
 .games button img{
     cursor:pointer;
@@ -211,7 +217,7 @@ body{
     background-color: rgb(242, 21, 21);
     text-align: center;
     color: aliceblue;
-    display: inline;
+    display: flex;
 }
 .games button:hover img{
     background-color: rgba(238, 52, 52, 0);
