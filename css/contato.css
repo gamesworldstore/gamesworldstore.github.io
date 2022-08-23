@@ -28,10 +28,12 @@ h1{
 #title{
     background-image: linear-gradient( rgb(8, 0, 26),rgb(51, 2, 120));
     max-width: none;
-
+    
 }
 p{
-    padding: 15px
+    padding: 15px;
+    min-width: 50vmin;
+    max-width: 40vmax;
 }
 
 form {
@@ -44,6 +46,7 @@ form {
     max-width: 20rem;
     background-color: #b9b6c1;
     text-align: center;
+    margin-bottom: 20px;
     
 }
 #nomeid, #id{
