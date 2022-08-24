@@ -24,31 +24,37 @@ const montarObjeto = () => {
         
         jogos.push(object);
     }
+    controle = false;
 };
+
 const mostrar = (titulo, imagem, preco) => {
     const li =document.createElement('li');
     const ul = document.createElement('ul').appendChild(li);
 
     const ptitle = document.createElement('h4');
     const img = document.createElement('img');
-    const button = document.createElement('button');
+//  const button = document.createElement('button');
     
 
     div.appendChild(ul);
     li.appendChild(img);
     li.appendChild(ptitle);
-    li.appendChild(button);
+//  li.appendChild(button);
 
     li.style.padding = "10px";
     img.style.width="300px";
+    ptitle.style.margin = '0';
 
     img.src = imagem;
     ptitle.textContent = titulo;
-    button.textContent = 'R$: ' + preco;
+//  button.textContent = 'R$: ' + preco;
 };
+let controle = true;
 
 const criar = () => {
-    montarObjeto();
+    if(controle){
+        montarObjeto();
+    };
 
     const input = document.querySelector("#searchbar").value;
     const busca = jogos.filter(jogo => jogo.titulo.includes(input));
@@ -79,9 +85,6 @@ let tbody = document.querySelector("#tbody");
 let thead = document.querySelector("#thead");
 let total = document.querySelector("#total");
 const button = document.createElement('button');
-
-
-
 caring.appendChild(p);
 
 let n = 0;
@@ -92,7 +95,7 @@ const somarPrecos = () => {
     let total = carrinho.reduce((valPrev, elemento) => valPrev + parseFloat(elemento.preco), 0);
     return total;
 }
-let x = 0;
+// let x = 0;
 
 const listar = () => {
 
@@ -121,17 +124,17 @@ const listar = () => {
         titulo.textContent = 'Jogo';
         preco.textContent = 'Preço';
         for(let i = 0; i < carrinho.length; i++){
-            const ex = document.createElement('button');
+            //const ex = document.createElement('button');
         
-            x++;
+        //    x++;
 
             let tr = tbody.insertRow();
     
             let titulo = tr.insertCell();
             let preco = tr.insertCell();
-            let excluir = tr.insertCell();
+        //  let excluir = tr.insertCell();
 
-            excluir.appendChild(ex);
+      /*    excluir.appendChild(ex);
             ex.id = x;
             excluir.style.display = 'inline';
             excluir.style.border = 'none';
@@ -139,10 +142,10 @@ const listar = () => {
             ex.style.fontSize = '90%';
             ex.style.padding = '0 4px';
             ex.style.marginTop = '1px';
-            ex.style.position = 'relative';
+            ex.style.position = 'relative'; */
             titulo.textContent = carrinho[i].titulo;
             preco.textContent = 'R$: ' + carrinho[i].preco;
-            ex.textContent = 'x';
+           /* ex.textContent = 'x'; */
             
         }
         let tl = total.insertRow();
@@ -185,6 +188,8 @@ const montarCarrinho = (titulo, imagem, preco) => {
     p.style.color = 'gray';
     
     p.textContent = n;
+    ocultar(table);
+    first_click = true;
 
 };
 
@@ -199,7 +204,9 @@ const verifica = (titulo) => {
 };
 
 const comparar = (n) => {
-    montarObjeto();
+    if(controle){
+        montarObjeto();
+    };
     const buy = document.querySelectorAll("p.preco");
     
     for (let i = 0; i < jogos.length; i++){
@@ -218,7 +225,7 @@ let first_click = true;
 const ocultar = (table) => {
     tbody.textContent = '';
     thead.textContent = '';
-    button.style.display = 'none';
+   button.style.display = 'none';
     table.style.display = 'none';
     table.border = "0";
 }
@@ -234,6 +241,10 @@ caring.addEventListener('click', () => {
     }
 });
 
+/* Fazer a Compra */
+const ok = document.createElement('button');
+const done = document.querySelector('.done');
+
 button.addEventListener('click', () => {
     while(carrinho.length){
         carrinho.pop();
@@ -241,12 +252,24 @@ button.addEventListener('click', () => {
         p.textContent = null;
         tbody.textContent = '';
         thead.textContent = '';
-        button.style.display = 'none';
+        button.style.display = 'none'; 
         table.style.display = 'none';
         table.border = "0";
         first_click = true;
-
     }
+    
+    const h1 = document.createElement('h1');
+    
+
+    done.appendChild(h1);
+    done.appendChild(ok);
+    
+    h1.textContent = 'Compra Concluída!';
+    ok.textContent = 'OK';
+});
+
+ok.addEventListener('click', () =>{
+    done.textContent = '';
 });
     
 
