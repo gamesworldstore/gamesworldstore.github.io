@@ -3,6 +3,7 @@ div.style.minWidth = "100vmin";
 div.style.maxWidth = "50vmax";
 
 const jogos = [];
+let id = 1;
 
 /* Busca por Jogo */
 
@@ -18,28 +19,32 @@ const montarObjeto = () => {
         let imagem = imagens[i].src;
         let preco = precos[i].textContent;
 
+        object.id = id;
         object.titulo = titulo;
         object.imagem = imagem;
         object.preco = preco;
         
         jogos.push(object);
+        id++;
     }
     controle = false;
 };
 
-const mostrar = (titulo, imagem, preco) => {
+const mostrar = (titulo, imagem, preco, id) => {
     const li =document.createElement('li');
     const ul = document.createElement('ul').appendChild(li);
 
     const ptitle = document.createElement('h4');
     const img = document.createElement('img');
-//  const button = document.createElement('button');
+    const button = document.createElement('button');
     
 
     div.appendChild(ul);
     li.appendChild(img);
     li.appendChild(ptitle);
-//  li.appendChild(button);
+    li.appendChild(button);
+
+    button.setAttribute("onclick", "comparar("+ id +")");
 
     li.style.padding = "10px";
     img.style.width="300px";
@@ -47,7 +52,7 @@ const mostrar = (titulo, imagem, preco) => {
 
     img.src = imagem;
     ptitle.textContent = titulo;
-//  button.textContent = 'R$: ' + preco;
+    button.textContent = 'R$: ' + preco;
 };
 let controle = true;
 
@@ -62,7 +67,7 @@ const criar = () => {
     h1.textContent = 'Pesquisa';
     div.textContent = '';
     for(let jogo of busca) {
-        mostrar(jogo.titulo, jogo.imagem, jogo.preco);
+        mostrar(jogo.titulo, jogo.imagem, jogo.preco, jogo.id);
     } 
 };
 
@@ -92,10 +97,11 @@ let n = 0;
 const carrinho = [];
 
 const somarPrecos = () => {
+
     let total = carrinho.reduce((valPrev, elemento) => valPrev + parseFloat(elemento.preco), 0);
+
     return total;
 }
-// let x = 0;
 
 const listar = () => {
 
@@ -111,8 +117,10 @@ const listar = () => {
     
     let th = thead.insertRow();
 
+    let qnt = th.insertCell();
     let titulo = th.insertCell();
     let preco = th.insertCell();
+    let acoes = th.insertCell();
     if(carrinho.length == 0){
         th.textContent = 'Carrinho Vazio';
     }
@@ -121,36 +129,49 @@ const listar = () => {
         table.appendChild(button);
         button.style.display = 'inline';
         
+        qnt.textContent = 'Qnt';
         titulo.textContent = 'Jogo';
         preco.textContent = 'Preço';
+        acoes.textContent = 'Ações';
+
         for(let i = 0; i < carrinho.length; i++){
-            //const ex = document.createElement('button');
-        
-        //    x++;
+            const ex = document.createElement('button');
+            const mais = document.createElement('button');
+            const menos = document.createElement('button');
 
             let tr = tbody.insertRow();
-    
+            
+            let qnt = tr.insertCell();
             let titulo = tr.insertCell();
             let preco = tr.insertCell();
-        //  let excluir = tr.insertCell();
 
-      /*    excluir.appendChild(ex);
-            ex.id = x;
-            excluir.style.display = 'inline';
-            excluir.style.border = 'none';
-            ex.style.cursor = 'pointer';
-            ex.style.fontSize = '90%';
-            ex.style.padding = '0 4px';
-            ex.style.marginTop = '1px';
-            ex.style.position = 'relative'; */
-            titulo.textContent = carrinho[i].titulo;
-            preco.textContent = 'R$: ' + carrinho[i].preco;
-           /* ex.textContent = 'x'; */
+            let excluir = tr.insertCell();
             
+            excluir.classList.add('button_align');
+
+            excluir.appendChild(mais);
+            excluir.appendChild(menos);
+            excluir.appendChild(ex);
+
+            mais.setAttribute("onclick", "addJogo("+ carrinho[i].id +")");
+            menos.setAttribute("onclick", "tiraJogo("+ carrinho[i].id +")");
+            ex.setAttribute("onclick", "removerJogo("+ carrinho[i].id +")");
+
+            qnt.textContent = carrinho[i].qnt;
+            titulo.textContent = carrinho[i].titulo;
+            preco.textContent = 'R$: ' + carrinho[i].preco + ',00';
+
+            mais.textContent = '+';
+            menos.textContent = '-';
+            ex.textContent = 'x';
         }
+        
         let tl = total.insertRow();
+        let row = tl.insertCell();
         let tot = tl.insertCell();
         let val = tl.insertCell();
+
+        tl.classList.add('total_car');
         
         tot.textContent = 'Total';
         val.textContent = 'R$: ' + somarPrecos() +',00';
@@ -158,23 +179,76 @@ const listar = () => {
         button.textContent = 'Comprar';
     }
 };
-
-/* ex.addEventListener('click', () => {
+const addJogo = (id) => {
     for(let i = 0; i < carrinho.length; i++){
-        if(ex.id == carrinho[i].id){
-            carrinho[i].pop();
+        if(carrinho[i].id == id) {
+            let qnt = carrinho[i].qnt;
+            let preco = carrinho[i].preco;
+            preco = preco / qnt;
+            qnt++;
+            preco = preco * qnt;
+            carrinho[i].qnt = qnt;
+            carrinho[i].preco = preco;
+            n++;
+            
+            itemsCarrinho();
+            listar();
         }
     }
-}); */
+}
+const tiraJogo = (id) => {
+    for(let i = 0; i < carrinho.length; i++){
+        if(carrinho[i].id == id) {
+            let qnt = carrinho[i].qnt;
+            let preco = carrinho[i].preco;
+            preco = preco / qnt;
+            qnt--;
+            preco = preco * qnt;
+            
+            if(qnt == 0){
+                removerJogo(id);
+                first_click = false;
+            }
+            else{
+                carrinho[i].qnt = qnt;
+                carrinho[i].preco = preco;
+                n--;
+                itemsCarrinho();
+                listar();
+            }  
+        }
+    }
+}
+
+const removerJogo = (id) => {
+    for(let i = 0; i < carrinho.length; i++){
+        if(carrinho[i].id == id) {
+            carrinho.splice(i, 1);
+            tbody.deleteRow(i);
+            n--;
+            itemsCarrinho();
+            
+            listar();
+        }
+    }
+}
+
+const itemsCarrinho = () => {
+    p.textContent = n;
+    ocultar(table);
+    first_click = true;
+}
 
 const montarCarrinho = (titulo, imagem, preco) => {
     p.textContent = '';
 
     let object = {};
+    object.id = n;
+    object.qnt = 1;
     object.titulo = titulo;
     object.imagem = imagem;
-    object.preco = preco;
-    object.id = n;
+    object.preco = parseFloat(preco);
+    
     carrinho.push(object);
 
     n++;
@@ -186,11 +260,8 @@ const montarCarrinho = (titulo, imagem, preco) => {
     p.style.placeContent = 'center';
     p.style.position= "fixed";
     p.style.color = 'gray';
-    
-    p.textContent = n;
-    ocultar(table);
-    first_click = true;
 
+    itemsCarrinho();
 };
 
 const verifica = (titulo) => {
@@ -202,15 +273,22 @@ const verifica = (titulo) => {
     return true;
 
 };
+const precos = [];
+
+window.addEventListener('load', () => {
+    const buy = document.querySelectorAll("p.preco");
+    for(let i = 0; i<buy.length; i++){
+        precos.push(buy[i].textContent);
+    }
+});
 
 const comparar = (n) => {
     if(controle){
         montarObjeto();
     };
-    const buy = document.querySelectorAll("p.preco");
-    
+
     for (let i = 0; i < jogos.length; i++){
-        if(buy[n-1].textContent === jogos[i].preco){
+        if(precos[n-1] === jogos[i].preco){
             if(verifica(jogos[i].titulo)){
                 montarCarrinho(jogos[i].titulo, jogos[i].imagem, jogos[i].preco);
             }
@@ -259,7 +337,6 @@ button.addEventListener('click', () => {
     }
     
     const h1 = document.createElement('h1');
-    
 
     done.appendChild(h1);
     done.appendChild(ok);
@@ -270,6 +347,4 @@ button.addEventListener('click', () => {
 
 ok.addEventListener('click', () =>{
     done.textContent = '';
-});
-    
-
+}); 
