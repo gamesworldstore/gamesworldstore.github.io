@@ -89,6 +89,7 @@ body{
     text-align: center;
     margin-top: 10px;
     margin-bottom: 20px;
+    
 }
 .title button{
     position: fixed;
@@ -112,6 +113,31 @@ body{
     transition: -0s;
     background-color: rgb(100, 20, 20);
 }
+.button_align{
+    place-content: center center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    border: none;
+}
+.total_car td{
+    border: none;
+    padding: 5px;
+}
+.button_align button {
+    background-color: rgb(31, 147, 151);
+}
+.button_align button:hover{
+    box-shadow: none;
+}
+.title table button{
+    border-radius: 10px;
+    position: relative;
+    border-color: black;
+    color: white;
+    font-weight: bold;
+    padding: 0px 7px;
+}
 .title img{
     margin-left: -2px;
     margin-bottom: -5px;
@@ -131,15 +157,10 @@ body{
     font-weight: bold;
 }
 .title table tbody{
+    place-content: center center;
+    align-items: center;
     color:rgb(160, 255, 184);
     
-}
-.title table button{
-    margin-top: 10px;
-    color: white;
-    font-weight: bold;
-    border-radius: 15px;
-    padding: 5px;
 }
 .done{
     left: 50%;
@@ -182,6 +203,7 @@ body{
     background-color: rgb(168, 12, 12);
     
 }
+
 .games{
     display: flex;
     place-content: center center;
