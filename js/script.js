@@ -184,11 +184,14 @@ const addJogo = (id) => {
         if(carrinho[i].id == id) {
             let qnt = carrinho[i].qnt;
             let preco = carrinho[i].preco;
+            
             preco = preco / qnt;
             qnt++;
             preco = preco * qnt;
+
             carrinho[i].qnt = qnt;
             carrinho[i].preco = preco;
+
             n++;
             
             itemsCarrinho();
@@ -213,6 +216,7 @@ const tiraJogo = (id) => {
                 carrinho[i].qnt = qnt;
                 carrinho[i].preco = preco;
                 n--;
+
                 itemsCarrinho();
                 listar();
             }  
@@ -223,11 +227,14 @@ const tiraJogo = (id) => {
 const removerJogo = (id) => {
     for(let i = 0; i < carrinho.length; i++){
         if(carrinho[i].id == id) {
+            let qnt = carrinho[i].qnt;
+
             carrinho.splice(i, 1);
             tbody.deleteRow(i);
-            n--;
+
+            n = n-qnt;
+
             itemsCarrinho();
-            
             listar();
         }
     }
