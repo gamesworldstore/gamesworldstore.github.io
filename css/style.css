@@ -89,7 +89,7 @@ body{
 .menu a:hover{
     color:rgb(45, 94, 255);    
 }
-#logo img{
+#logo{
     margin-left: 40px;
     margin-right: 40px;
 }
