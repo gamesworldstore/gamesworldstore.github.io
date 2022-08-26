@@ -240,7 +240,7 @@ body{
     flex-direction: column;
 }
 .done h1{
-
+    text-align: center;
     background-color: rgb(49, 15, 136);
     padding: 50px 25px;
     border-radius: 20px;
@@ -254,7 +254,7 @@ body{
     padding: 7px;
     border: none;
     border-radius: 10px;
-    margin-top: -50px;
+    margin-top: -45px;
     font-size: 70%;
     color: white;
     cursor: pointer;
