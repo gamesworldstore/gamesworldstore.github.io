@@ -10,6 +10,20 @@
     <title>Game's World</title>
 </head>
 <body>
+    <div class="login">
+        <div id="loginBackground">
+            <h1>Login</h1>
+            <br>
+            <input type="text" placeholder="Usuário" id="inputUser">
+            <br>
+            <input type="password" placeholder="Senha" id="inputPassword"> 
+            <br>
+            <button id="loginButton" onclick="verificar()">Entrar</button>
+        </div>
+    </div>
+    <div id ='done'>
+        <div class="done"></div>
+    </div>
     <nav class = "menu">
         <li><a href="index.html">
             <img src="img/logo.png" 
@@ -31,6 +45,9 @@
                 <img src="img/lupa.svg" alt="lupa" height="10px" title="Busca">
             </button>
         </div>
+        <div id ="userid">
+            <img src="img/user.png" alt="user" height="40px" title="Usuário" >
+        </div>
     </nav>
     <div class ="title">
         <br>
@@ -49,7 +66,6 @@
         <h1 id="h1title">Jogos Disponíveis</h1>
         <br>
     </div>
-    <div class="done"></div>
     <div class="games">
         
         <ul>
@@ -61,7 +77,7 @@
                 <h4 class= "jogo">Forza Horizon 4</h4>
                 <button id = "cart" title="Comprar" onclick="comparar(1)">
                     R$: <p class="preco">209,00</p>  
-                    <img src="img/cart.svg" 
+                    <img src="img/cart.svg"
                     id = "cartimg"
                     width="25px"
                     height="20px"

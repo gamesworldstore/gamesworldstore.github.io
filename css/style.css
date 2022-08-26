@@ -10,6 +10,57 @@
 body{
     background-color: rgb(16, 17, 31); 
 }
+.login{
+    width: 100%;
+    height:100%;
+    display: flex;
+    place-items: center;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.869);
+}
+
+#loginBackground {
+    box-shadow: 0 0 15px black;
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(36, 11, 98);
+    color: white;
+    font-weight: bold;
+}
+#loginBackground h1{
+    text-shadow: 1px 1px 3px rgb(0, 0, 0);
+    font-size: 200%;
+    color: white;
+}
+#loginBackground input {
+    outline: none;
+    border: none;
+    padding: 5px;
+}
+#loginBackground input:focus {
+    box-shadow: 0 0 5px rgb(0, 0, 0);
+}
+#loginBackground button {
+    border: none;
+    background-color: rgb(172, 30, 30);
+    padding: 5px;
+    color: white;
+    border-radius: 10px;
+    transition: .2s;
+}
+#loginBackground button:hover{
+    background-color: rgb(255, 0, 0);
+    box-shadow: 0 0 5px rgb(44, 44, 44);
+}
+
+#loginBackground button:active{
+    transition: 0s;
+    background-color: rgb(125, 19, 19);
+}
+
 .menu{
     padding-top: 5px;
     background-image: linear-gradient(to right, rgb(13, 0, 44),black );
@@ -38,8 +89,7 @@ body{
 .menu a:hover{
     color:rgb(45, 94, 255);    
 }
-#logo{
-    filter:invert(60%);
+#logo img{
     margin-left: 40px;
     margin-right: 40px;
 }
@@ -76,7 +126,26 @@ body{
 #search button:hover img{
     filter:invert(100);
 }
+#userid{
+    cursor: pointer;
+    padding-top: 5px;
+    direction: rtl;
+}
+#userid h3{
+    box-shadow: rgb(125, 125, 125) 0px 0px 15px; 
+    color: white;
+    padding: 5px;
+    background-color: rgb(36, 11, 98);
+    position: fixed;
+    display: none;
+    margin-top: 30px;
+    border-radius: 10px;
+    border-top-right-radius: 0;
+}
+#userid:hover h3{
+    display: inline;
 
+}
 .title{
     direction:rtl;
     padding: 10px;
@@ -92,15 +161,13 @@ body{
     
 }
 .title button{
-    position: fixed;
     outline: none;
     background-color: rgb(234, 26, 26);
     cursor: pointer;
     padding: 10px;
     border-radius: 100%;
-    border-style: solid;
-    border-color: transparent;
-    border-width: 1px;
+    border: 1px solid transparent;
+
     transition: .3s;
     direction: ltr;
 }
@@ -141,7 +208,6 @@ body{
 .title img{
     margin-left: -2px;
     margin-bottom: -5px;
-    filter: invert(100%);
 }
 .title table{
     direction: ltr;
@@ -149,6 +215,7 @@ body{
     margin-top: 50px;
     margin-right: 50px;
     border-radius: 10px;
+    border-top-right-radius: 0;
     text-align: center;
     position:fixed;
     padding: 5px;
@@ -162,32 +229,31 @@ body{
     color:rgb(160, 255, 184);
     
 }
-.done{
-    left: 50%;
-    margin-left: -250px;
-    width: 500px;
+#done{
+    display: flex;
+    place-items: center;
     position: fixed;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.done{
     display: flex;
     flex-direction: column;
-    margin-top: -150px;
-    
 }
 .done h1{
 
-    background-color: rgb(36, 11, 98);
+    background-color: rgb(49, 15, 136);
     padding: 50px 25px;
     border-radius: 20px;
     font-size: 200%;
     color: white;
-    border: 1px solid rgb(158, 0, 0);
-    box-shadow: 0 0 15px rgb(102, 102, 102);
+    border: 1px solid rgb(31, 31, 31);
+    box-shadow: 0 0 15px rgb(0, 0, 0);
 }
 .done button{
     background-color: rgb(168, 12, 12);
     padding: 7px;
     border: none;
     border-radius: 10px;
-    position: relative;
     margin-top: -50px;
     font-size: 70%;
     color: white;
