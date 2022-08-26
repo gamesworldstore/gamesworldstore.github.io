@@ -1,3 +1,56 @@
+
+/*Usuário e senha*/
+
+
+let user;
+const clickUser = document.querySelector('#userid');
+
+const verificar = () => {
+    const inputUser = document.querySelector('#inputUser').value;
+    const inputPassword = document.querySelector('#inputPassword').value;
+    let msg = '';
+
+    if(inputUser == ''){
+        msg += '- Informe o Usuário. \n';
+    }
+    if(inputPassword == ''){
+        msg += '- Informe a Senha. \n';
+    }
+    if(msg != ''){
+        alert(msg);
+    }
+    else{
+        logar();
+    }
+    
+}
+
+const logar = () => {
+    const login = document.querySelector('.login');
+    const loginBackground = document.querySelector("#loginBackground");
+    const inputUser = document.querySelector('#inputUser').value;
+
+    loginBackground.textContent = 'Seja Bem Vindo '+ inputUser;
+
+    const sair = document.createElement('button');
+    loginBackground.appendChild(sair);
+
+    sair.style.marginTop = '10px';
+
+    sair.textContent = 'Continuar';
+    sair.addEventListener('click', () =>{
+
+        let h3 = document.createElement('h3');
+        clickUser.appendChild(h3);
+
+        h3.textContent = inputUser;
+
+        caring.style.position = 'fixed';
+        document.querySelector('body').removeChild(login);
+    });
+
+};
+
 const div = document.querySelector(".games");
 div.style.minWidth = "100vmin";
 div.style.maxWidth = "50vmax";
@@ -38,7 +91,6 @@ const mostrar = (titulo, imagem, preco, id) => {
     const img = document.createElement('img');
     const button = document.createElement('button');
     
-
     div.appendChild(ul);
     li.appendChild(img);
     li.appendChild(ptitle);
@@ -83,6 +135,7 @@ document.querySelector("#searchbar").addEventListener('keypress', (e) =>{
 });
 
 /* Carrinho de Compras */
+
 const p = document.createElement('p');
 const caring = document.querySelector("#caring");
 const table = document.querySelector('.table');
@@ -93,7 +146,6 @@ const button = document.createElement('button');
 caring.appendChild(p);
 
 let n = 0;
-
 const carrinho = [];
 
 const somarPrecos = () => {
@@ -173,7 +225,8 @@ const listar = () => {
 
         tl.classList.add('total_car');
         
-        tot.textContent = 'Total';
+        tot.style.textAlign = 'right';
+        tot.textContent = 'Total:';
         val.textContent = 'R$: ' + somarPrecos() +',00';
 
         button.textContent = 'Comprar';
@@ -310,7 +363,7 @@ let first_click = true;
 const ocultar = (table) => {
     tbody.textContent = '';
     thead.textContent = '';
-   button.style.display = 'none';
+    button.style.display = 'none';
     table.style.display = 'none';
     table.border = "0";
 }
@@ -327,8 +380,10 @@ caring.addEventListener('click', () => {
 });
 
 /* Fazer a Compra */
+
 const ok = document.createElement('button');
 const done = document.querySelector('.done');
+const doneId = document.querySelector('#done');
 
 button.addEventListener('click', () => {
     while(carrinho.length){
@@ -343,6 +398,8 @@ button.addEventListener('click', () => {
         first_click = true;
     }
     
+    doneId.style.width = '100%';
+    doneId.style.height = '100%';
     const h1 = document.createElement('h1');
 
     done.appendChild(h1);
@@ -350,8 +407,12 @@ button.addEventListener('click', () => {
     
     h1.textContent = 'Compra Concluída!';
     ok.textContent = 'OK';
+    caring.style.position = 'static';
 });
 
 ok.addEventListener('click', () =>{
+    doneId.style.width = '0%';
+    doneId.style.height = '0%';
     done.textContent = '';
+    caring.style.position = 'fixed';
 }); 
