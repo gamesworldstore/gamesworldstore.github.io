@@ -4,4 +4,4 @@
 
 ## 
 
-## Quem contribui com o projeto: wesleyfreit, wandsoader1 e 
+## Quem contribui com o projeto: wesleyfreit, wandsoader1 e davidfherreira
