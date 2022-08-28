@@ -6,11 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/contato.css">
     <link rel="icon" href="img/control.png">
     <title>Contato</title>
 </head>
-<body>
+<body id="corpoContato">
     <nav class = "menu">
         <li><a href="index.html">
             <img src="img/logo.png" 
@@ -30,7 +29,7 @@
     </nav>
     <div class="container">
         
-        <form name="meu_form">
+        <form id="formu" name="meu_form">
         
             <h1 id ="h1">FALE CONOSCO</h1>
     
@@ -47,16 +46,16 @@
             <br>
             
         
-            <textarea placeholder="Deixe sua opnião" rows="3"></textarea>
+            <textarea id="areatxt" placeholder="Deixe sua opnião" rows="3"></textarea>
             <br>
         
             <input type="submit" class="enviar" onclick="Enviar();" value="Enviar" />
-            <h4>🎧 ouvidoria  <br> 📞 0800 054 9831</h4>
+            <h4 id="forcliente">🎧 ouvidoria  <br> 📞 0800 054 9831</h4>
         </form>
         <script src="js/contato.js"></script>
     </div>
     <footer class="end-page">
-        <p>2022 <b>©</b></p>
+        <p id="footer">2022 <b>©</b></p>
     </footer>
 </body>
 </html>
