@@ -2,6 +2,8 @@
 
 ## Pensando em usuários consumidores de games, a plataforma foi desenvolvida para facilitar a compra desses produtos. Por meio de um sistema simples de fácil acesso e utilização.
 
-## 
+## Os usuários podem utilizar o projeto para fins de aprendizagem.
+
+## Para obter ajuda, envie um email para wesleyrichard30@gmail.com
 
 ## Quem contribui com o projeto: wesleyfreit, wandsoader1 e davidfherreira
