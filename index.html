@@ -10,17 +10,7 @@
     <title>Game's World</title>
 </head>
 <body>
-    <div class="login">
-        <div id="loginBackground">
-            <h1>Login</h1>
-            <br>
-            <input type="text" placeholder="Usuário" id="inputUser">
-            <br>
-            <input type="password" placeholder="Senha" id="inputPassword"> 
-            <br>
-            <button id="loginButton" onclick="verificar()">Entrar</button>
-        </div>
-    </div>
+    <div class="login"></div>
     <div id ='done'>
         <div class="done"></div>
     </div>
@@ -47,7 +37,7 @@
             </button>
         </div>
         <div id ="userid">
-            <img src="img/user.png" alt="user" height="40px" title="Usuário" >
+            <img src="img/user.png" alt="user" height="40px" title="Usuário" onclick="analise()">
         </div>
     </nav>
     <div class ="title">
@@ -57,7 +47,8 @@
             title="Carrinho"
             height="35px"
             width="40px"
-            alt="">
+            alt="carrinho"
+            class="carIMG">
         </button>
         <table class = "table">
             <thead id = "thead"></thead>
