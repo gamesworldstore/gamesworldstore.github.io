@@ -1,9 +1,57 @@
 
 /*Usuário e senha*/
 
+let user = false;
 
-let user;
+const analise = () => {
+    if(user){}
+    else{
+        logar();
+    }
+}
+
 const clickUser = document.querySelector('#userid');
+
+const logar = () => {
+    caring.style.position = 'static';
+    itemsCarrinho();
+
+    const loginDiv = document.querySelector('.login');
+    loginDiv.style.width = '100vw';
+    loginDiv.style.height = '100vh';
+    loginDiv.style.display = 'flex';
+    loginDiv.style.placeItems = 'center';
+    loginDiv.style.backgroundColor = 'rgba(0, 0, 0, 0.869)';
+    loginDiv.style.position = 'fixed';
+
+    const loginBackground = document.createElement('div');
+    loginDiv.appendChild(loginBackground);
+    loginBackground.setAttribute("id", "loginBackground");
+
+    const h1 = document.createElement('h1');
+    loginBackground.appendChild(h1);
+    h1.textContent = 'Login';
+
+    const inputUser = document.createElement('input');
+    loginBackground.appendChild(inputUser);
+    inputUser.setAttribute("type", "text");
+    inputUser.setAttribute("placeHolder", "Usuário");
+    inputUser.setAttribute("id", "inputUser");
+
+    const inputPassword = document.createElement('input');
+    loginBackground.appendChild(inputPassword);
+    inputPassword.setAttribute("type", "password");
+    inputPassword.setAttribute("placeHolder", "Senha");
+    inputPassword.setAttribute("id", "inputPassword");
+
+    const loginButton = document.createElement('button');
+    loginBackground.appendChild(loginButton);
+    loginButton.setAttribute("id", "loginButton");
+    loginButton.textContent = 'Entrar';
+
+    loginButton.setAttribute("onclick", "verificar()");
+
+}
 
 const verificar = () => {
     const inputUser = document.querySelector('#inputUser').value;
@@ -20,17 +68,19 @@ const verificar = () => {
         alert(msg);
     }
     else{
-        logar();
+        entrar();
     }
     
 }
 
-const logar = () => {
+const entrar = () => {
     const login = document.querySelector('.login');
     const loginBackground = document.querySelector("#loginBackground");
     const inputUser = document.querySelector('#inputUser').value;
 
     loginBackground.textContent = 'Seja Bem Vindo '+ inputUser;
+
+    user = inputUser;
 
     const sair = document.createElement('button');
     loginBackground.appendChild(sair);
@@ -144,6 +194,8 @@ let thead = document.querySelector("#thead");
 let total = document.querySelector("#total");
 const button = document.createElement('button');
 caring.appendChild(p);
+
+caring.style.position = 'fixed';
 
 let n = 0;
 const carrinho = [];
@@ -313,11 +365,11 @@ const montarCarrinho = (titulo, imagem, preco) => {
 
     n++;
 
-    p.style.fontSize = '80%'; 
+    p.style.fontSize = '100%'; 
     p.style.fontWeight = 'bold';
-    p.style.marginTop = '-32px';
+    p.style.marginTop = '-30px';
     p.style.marginLeft = '17px';
-    p.style.placeContent = 'center';
+    p.style.textAlign = 'center';
     p.style.position= "fixed";
     p.style.color = 'gray';
 
@@ -386,28 +438,36 @@ const done = document.querySelector('.done');
 const doneId = document.querySelector('#done');
 
 button.addEventListener('click', () => {
-    while(carrinho.length){
-        carrinho.pop();
-        n = 0;
-        p.textContent = null;
-        tbody.textContent = '';
-        thead.textContent = '';
-        button.style.display = 'none'; 
-        table.style.display = 'none';
-        table.border = "0";
-        first_click = true;
-    }
-    
-    doneId.style.width = '100%';
-    doneId.style.height = '100%';
-    const h1 = document.createElement('h1');
 
-    done.appendChild(h1);
-    done.appendChild(ok);
+    if(user){
+        while(carrinho.length){
+            carrinho.pop();
+            n = 0;
+            p.textContent = null;
+            tbody.textContent = '';
+            thead.textContent = '';
+            button.style.display = 'none'; 
+            table.style.display = 'none';
+            table.border = "0";
+            first_click = true;
+        }
+        
+        doneId.style.width = '100%';
+        doneId.style.height = '100%';
+        const h1 = document.createElement('h1');
     
-    h1.textContent = 'Compra Concluída!';
-    ok.textContent = 'OK';
-    caring.style.position = 'static';
+        done.appendChild(h1);
+        done.appendChild(ok);
+        
+        h1.textContent = 'Compra Concluída!';
+        ok.textContent = 'OK';
+        caring.style.position = 'static';
+    }
+    else{
+        logar();
+    }
+
+    
 });
 
 ok.addEventListener('click', () =>{
