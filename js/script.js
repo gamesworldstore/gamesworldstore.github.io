@@ -514,8 +514,6 @@ const removerJogo = (id) => {
     }
 }
 
-
-
 /* PARTE RESPONSÁVEL PELO CLIQUE NOS BOTÕES DE COMPRA DOS JOGOS E ENVIÁ-LOS AO CARRINHO DE COMPRAS */
 
 // Criação de um array com os preços dos jogos assim que o site abrir
@@ -533,6 +531,10 @@ window.addEventListener('load', () => {
 // Função que verifica se o jogo já foi adicionado ao carrinho através do título, para não ficar repetido
 
 const verifica = (titulo) => {
+    if(localStorage.carrinhoSave){
+        carrinho = JSON.parse(localStorage.getItem('carrinhoSave'));
+    }
+
     for(let i = 0; i < carrinho.length; i++){
         if(carrinho[i].titulo === titulo){
             return false;
