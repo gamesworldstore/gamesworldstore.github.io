@@ -7,3 +7,5 @@
 ## Para obter ajuda, envie um email para wesleyrichard30@gmail.com
 
 ## Quem contribui com o projeto: wesleyfreit, wandsoader1 e davidfherreira
+
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=wesleyfreit&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
