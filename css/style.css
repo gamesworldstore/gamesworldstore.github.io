@@ -56,7 +56,7 @@ body{
 
 .menu{
     padding-top: 5px;
-    background-image: linear-gradient(to right, rgb(13, 0, 44),black );
+    background-image: linear-gradient(to right, rgb(13, 0, 44),rgb(0, 0, 0) );
     display: flex;
     place-items: left;
     flex-wrap:wrap;
@@ -410,7 +410,7 @@ body{
         place-items: center;
         color:white;
 }
-input:focus, #areatxt:focus {
+#nomeid:focus, #areatxt:focus, #id:focus {
     border-color: #000066;
     box-shadow: 0px 0px 9px #000000;
     font-size: 13px;
